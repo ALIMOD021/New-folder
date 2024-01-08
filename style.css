@@ -1,16 +1,205 @@
-*{
-    margin: 0 ;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     color: black;
 }
+
 /* font vazir */
 @font-face {
     font-family: "vazir";
-    src: url(/fonts/Vazir-Medium-FD-WOL.ttf) ;
+    src: url(/fonts/Vazir-Medium-FD-WOL.ttf);
 }
+
+@font-face {
+    font-family: 'lalezar';
+    src: url(/fonts/Lalezar-Regular.ttf);
+}
+
 /* body codes */
-body{
-font-family: "vazir";
+body {
+    font-family: "vazir";
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+.container {
+    max-width: 1000px;
+    min-width: 1000px;
+    margin: 0 auto;
+}
+
+.header-detail-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-main-section {
+    background-color: #4F67FF;
+    height: 85%;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    width: 100vw;
+}
+
+.right-header-deatil-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.right-header-deatil-div>div>i,
+span {
+    color: white;
+}
+
+.telphone-deatil-box,
+.email-deatil-box,
+.working-hour-deatil-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.email-deatil-text {
+    font-family: "lalezar";
+    letter-spacing: 2px;
+}
+
+.left-header-deatil-div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-media-link>i {
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 500ms ease-in-out;
+}
+
+.social-media-link>i:hover {
+    background-color: #00CDC4;
+    transform: translateY(-10px);
+}
+
+.header-nav {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    border-radius: 20px;
+    padding-left: 8rem;
+    margin-bottom: 5rem;
+}
+
+.header-nav-logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.school-logo-box {
+    transform: scale(0.5);
+    background-color: black;
+}
+
+.header-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.header-nav-list-item {
+    position: relative;
+}
+
+.header-nav-list-item::before {
+    content: '';
+    display: block;
+    border-bottom: solid 2px #4F67FF;
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    transform: scale(0);
+    transition: all 500ms ease-in-out;
+}
+
+.header-nav-list-item:hover:before {
+
+    transform: scale(1);
+}
+
+.start-link {
+    background-color: #00CDC4;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: all 250ms ease-in;
+}
+
+.start-link:hover {
+    border: solid 2px #00CDC4;
+    background-color: transparent;
+    color: #00CDC4;
+}
+
+.start-link {
+    color: white;
+}
+
+.header-welcome-div {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.left-header-welcome-div {
+    width: 650px;
+}
+
+.header-welcome-image {
+    width: 100%;
+}
+
+.header-welcome-text {
+    font-family: 'lalezar';
+    font-size: 40px;
+    color: white;
+    margin-bottom: 2rem;
+    width: 80%;
+}
+
+.signup-link {
+    background-color: #00CDC4;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    color: white;
+    transition: all ease 500ms;
+}
+
+.signup-link:hover {
+    background-color: #06ba36;
+}
+
+/* animation */
+@keyframes myAnim {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
 }
