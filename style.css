@@ -9,12 +9,12 @@
 /* font vazir */
 @font-face {
     font-family: "vazir";
-    src: url(/fonts/Vazir-Medium-FD-WOL.ttf);
+    src: url(fonts/Vazir-Medium-FD-WOL.ttf);
 }
 
 @font-face {
     font-family: 'lalezar';
-    src: url(/fonts/Lalezar-Regular.ttf);
+    src: url(fonts/Lalezar-Regular.ttf);
 }
 
 /* body codes */
