@@ -19,18 +19,18 @@
 
 /* body codes */
 body {
-    font-family: "vazir";
+    font-family: "vazir", serif;
 }
 
 header {
     height: 100vh;
     width: 100%;
-    animation: myAnim 2s ease 0s 1 normal forwards;
+    animation: header-opnner 2s ease 0s 1 normal forwards;
 }
 
 .container {
     max-width: 1000px;
-    min-width: 1000px;
+    min-width: auto;
     margin: 0 auto;
 }
 
@@ -48,7 +48,7 @@ header {
     width: 100vw;
 }
 
-.right-header-deatil-div {
+.right-header-detail-div {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,25 +56,25 @@ header {
     padding: 1rem;
 }
 
-.right-header-deatil-div>div>i,
+.right-header-detail-div>div>i,
 span {
     color: white;
 }
 
-.telphone-deatil-box,
-.email-deatil-box,
-.working-hour-deatil-box {
+.telephone-detail-box,
+.email-detail-box,
+.working-hour-detail-box {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.email-deatil-text {
+.email-detail-text {
     font-family: "lalezar";
     letter-spacing: 2px;
 }
 
-.left-header-deatil-div {
+.left-header-detail-div {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -190,16 +190,367 @@ span {
 }
 
 .signup-link:hover {
-    background-color: #06ba36;
+    background-color: rgb(6, 186, 54);
+}
+
+.line {
+    width: 20px;
+    background-color: black;
+    height: 3px;
+    margin-bottom: 3px;
+    display: block;
+}
+
+.nav-mobile {
+    display: none;
+}
+
+/* header respnosive */
+@media screen and (max-width:831px) {
+
+    .telephone-detail-box,
+    .email-detail-box,
+    .working-hour-detail-box {
+        font-size: 14px;
+    }
+
+    .header-nav {
+        padding-left: 4rem;
+    }
+}
+
+@media screen and (max-width:755px) {
+
+    .telephone-detail-box,
+    .email-detail-box,
+    .working-hour-detail-box {
+        font-size: 12px;
+    }
+
+    .header-nav {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width:716px) {
+
+    .header-welcome-text {
+        font-size: 32px;
+    }
+
+    .header-nav>* {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:686px) {
+
+    .telephone-detail-box,
+    .email-detail-box,
+    .working-hour-detail-box {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width:669px) {
+    .header-nav-list {
+        display: none;
+    }
+
+    #toggle_nav:checked+.header-nav-list-mobile {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        height: 100%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        list-style: none;
+        text-align: center;
+        transition: all 500ms ease;
+        transform: translateX(0);
+
+    }
+
+    .header-nav-list-mobile {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        height: 100%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        list-style: none;
+        text-align: center;
+        transform: translateX(510px);
+        transition: all 500ms ease;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+
+    .left-header-detail-div {
+        display: none;
+    }
+
+    .header-welcome-text {
+        font-size: 22px;
+    }
+
+    .school-logo-box {
+        transform: scale(0.3);
+    }
+
+    .school-title {
+        font-size: 16px;
+        margin-right: -2rem;
+    }
+
+    .header-nav {
+        padding-left: 1rem;
+    }
+
+    .header-nav-logo-title {
+        margin-right: -2rem;
+    }
+
+    .header-welcome-image {
+        width: 200px;
+    }
+
+    .header-welcome-div {
+        flex-direction: column;
+    }
+
+    .left-header-welcome-div {
+        width: auto;
+    }
+
+    .right-header-welcome-div {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-height:667px) {
+    .header-nav {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-height:545px) {
+    .header-nav {
+        margin-bottom: 0rem;
+    }
+
+    .header-welcome-image {
+        width: 300px;
+    }
+
+    .right-header-welcome-div {
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width:518px) {
+
+    .telephone-detail-box,
+    .working-hour-detail-box {
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    .email-detail-box {
+        display: block;
+    }
+
+    .left-header-welcome-div>img {
+        width: 250px;
+    }
+
+    .header-nav {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width:509px) {
+
+    .telephone-detail-box,
+    .working-hour-detail-box {
+        font-size: 11px;
+        gap: 10px;
+    }
+
+}
+
+@media screen and (max-width:487px) {
+
+    .telephone-detail-box,
+    .email-detail-box,
+    .working-hour-detail-box {
+        /* gap: 10px; */
+        font-size: 11px;
+    }
+
+}
+
+@media screen and (max-width:485px) {
+
+    .telephone-detail-box,
+    .email-detail-box,
+    .working-hour-detail-box {
+        gap: 10px;
+        font-size: 11px;
+    }
+
+}
+
+@media screen and (max-width:479px) {
+
+    .telephone-detail-box,
+    .email-detail-box,
+    .working-hour-detail-box {
+        gap: 10px;
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width:449px) {
+
+    .email-detail-box {
+        display: none;
+    }
+
+    .telephone-detail-box,
+    .working-hour-detail-box {
+        gap: 10px;
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width:425px) {
+
+    .telephone-detail-box,
+    .working-hour-detail-box {
+        font-size: 10px;
+        gap: 10px;
+    }
+
+    .email-detail-box {
+        display: none;
+    }
+
+    .left-header-welcome-div>img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width:375px) {
+
+    .telephone-detail-box,
+    .working-hour-detail-box {
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    .email-detail-box {
+        display: none;
+    }
+
+    .left-header-welcome-div>img {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width:375px) {
+
+    .telephone-detail-box,
+    .working-hour-detail-box {
+        font-size: 11px;
+        gap: 10px;
+    }
+
+    .email-detail-box {
+        display: none;
+    }
+}
+
+@media screen and (max-width:340px) {
+
+    .telephone-detail-box,
+    .working-hour-detail-box {
+        font-size: 10px;
+        gap: 10px;
+    }
+
+    .email-detail-box {
+        display: none;
+    }
+
+    .start-box {
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width:321px) {
+
+    .school-logo-box {
+        display: none;
+    }
+
+    .school-title {
+        margin-right: 2rem;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:320px) {
+
+    .school-logo-box {
+        display: none;
+    }
+
+    .school-title {
+        margin-right: 2rem;
+    }
+
+    .telephone-detail-box,
+    .working-hour-detail-box {
+        font-size: 10px;
+        gap: 10px;
+    }
+
+    .left-header-welcome-div>img {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width:317px) {
+
+    .telephone-detail-box,
+    .working-hour-detail-box {
+        font-size: 9px;
+    }
 }
 
 /* animation */
-@keyframes myAnim {
-	0% {
-		transform: scale(0);
-	}
+@keyframes header-opnner {
+    0% {
+        transform: scale(0);
+    }
 
-	100% {
-		transform: scale(1);
-	}
+    100% {
+        transform: scale(1);
+    }
 }
